@@ -5,14 +5,17 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import TopBar from '../../components/Homepage/TopBar';
+import TopBar from '../../components/Homepage/TopBar/Loadable';
+import Slider from '../../components/Homepage/SliderContainer/Loadable';
+import AboutMe from '../../components/Homepage/AboutMe/Loadable';
 import squairy from '../../images/squairy_light.png';
 
-/* eslint-disable react/prefer-stateless-function */
 function Homepage() {
   return (
     <Container>
       <TopBar />
+      <Slider />
+      <AboutMe />
     </Container>
   );
 }
@@ -25,8 +28,8 @@ const Container = styled.div`
     url(${squairy});
   background-size: cover, contain;
   background-position: center, top center;
-  height: 100vh;
   display: grid;
+  grid-template-rows: repeat(3, min-content);
 `;
 
 export default Homepage;

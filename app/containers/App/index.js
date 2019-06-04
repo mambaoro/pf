@@ -7,10 +7,12 @@ import GlobalStyle from '../../global-styles';
 
 export default function App() {
   return (
-    <Switch>
-      <Route path="/" component={HomePage} />
-      <Route path="" component={NotFoundPage} />
+    <div>
+      <Switch>
+        <Route path="/" component={HomePage} />
+        <Route path="" component={NotFoundPage} />
+      </Switch>
       <GlobalStyle />
-    </Switch>
+    </div>
   );
 }

@@ -25,17 +25,17 @@ function TopBar() {
 
 const Div = styled.div`
   display: flex;
-  align-self: flex-start;
-  margin: 1rem;
-  margin-top: 0.5rem;
+  align-self: start;
+  margin: 2rem;
+  margin-top: 1rem;
   justify-content: space-between;
   align-items: center;
 `;
 
 const ObjectIconGit = styled.object`
   display: block;
-  width: 3.15rem;
-  height: 3.15rem;
+  width: 4.8rem;
+  height: 4.8rem;
   margin-left: -4px;
   pointer-events: none;
 `;
@@ -48,8 +48,8 @@ const LinkIconMenu = styled.a`
 `;
 
 const ObjectIconMenu = styled.object`
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   pointer-events: none;
 `;
 

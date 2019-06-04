@@ -1,13 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    font-size: 62.5%;
-  }
-
   :root {
-    /* Put css variables here */
+    --color-heading-primary: #e0e0e0;
+
+    --gradient-primary: linear-gradient(90deg, #2B5876 0%, #4E4376 100%);
   }
   
   *,
@@ -17,21 +14,23 @@ const GlobalStyle = createGlobalStyle`
   h2,
   h3,
   h4,
-  h5,
-  h6,
   p {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-weight: inherit;
   }
 
+  html,
   body {
+    font-size: 62.5%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     box-sizing: border-box;
+    font-weight: 400;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {

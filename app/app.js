@@ -13,7 +13,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ApolloProvider } from 'react-apollo';
 import 'sanitize.css/sanitize.css';
-
+import FontFaceObserver from 'fontfaceobserver';
 // Import root app
 import App from 'containers/App';
 
@@ -28,6 +28,14 @@ import 'file-loader?name=.htaccess!./.htaccess';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
+
+// Load 'Lato' font
+
+const lato = new FontFaceObserver('Lato', {});
+
+lato.load().then(() => {
+  document.body.classList.add('fontLoaded');
+});
 
 const MOUNT_NODE = document.getElementById('app');
 
