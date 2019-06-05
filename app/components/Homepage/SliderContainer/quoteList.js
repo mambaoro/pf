@@ -3,7 +3,7 @@ const quoteList = [
   'CSS without Bootstrap',
   'Remote data with Apollo',
   'Server with NodeJS',
-  'Database with Prisma API',
+  'Database with Prisma 2',
   'Deployment with Heroku',
 ];
 

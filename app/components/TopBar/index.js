@@ -7,8 +7,8 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import github from '../../../images/svg/icons8-github.svg';
-import filled from '../../../images/svg/icons8-menu-filled.svg';
+import github from '../../images/svg/icons8-github.svg';
+import filled from '../../images/svg/icons8-menu-filled.svg';
 
 function TopBar() {
   return (
@@ -30,8 +30,10 @@ const Div = styled.div`
   margin-top: 1rem;
   justify-content: space-between;
   align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 90%;
+  z-index: 100;
 `;
 
 const ObjectIconGit = styled.object`

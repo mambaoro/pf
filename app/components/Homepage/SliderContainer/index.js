@@ -35,6 +35,7 @@ function SliderContainer() {
 }
 
 const Section = styled.section`
+  margin-top: 6.5rem;
   justify-self: center;
   width: 27.5rem;
   div {

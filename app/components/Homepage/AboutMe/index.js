@@ -32,7 +32,7 @@ function AboutMe() {
 }
 
 const cssFontSize = css`
-  font-size: 1.8rem;
+  font-size: var(--font-size-text);
 `;
 
 const Section = styled.section``;
