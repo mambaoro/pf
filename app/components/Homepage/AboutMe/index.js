@@ -6,39 +6,80 @@
 
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
+import { cssDivHeadings } from '../../../base';
 
 function AboutMe() {
   return (
     <Section>
       <DivHeadings>
-        <H1>Mamadou Baoro</H1>
-        <H2>Web Developer</H2>
+        <h1>Mamadou Baoro</h1>
+        <h2>Web Developer</h2>
       </DivHeadings>
+      <DivPresentation>
+        <p>
+          Hi, I’m a web developer focused on creating fully working web
+          applications. From user interface to deployment on the cloud, I&apos;m
+          able to build any parts of a web app with a robust tech stack.
+        </p>
+        <Button>
+          <Link to="/about-me">More about me</Link>
+        </Button>
+      </DivPresentation>
     </Section>
   );
 }
 
+const cssFontSize = css`
+  font-size: 1.8rem;
+`;
+
 const Section = styled.section``;
 
 const DivHeadings = styled.div`
+  ${cssDivHeadings}
+`;
+
+const DivPresentation = styled.div`
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  background-color: var(--bg-text-primary);
+  p {
+    ${cssFontSize}
+    line-height: 2.4rem;
+    color: var(--color-text-primary);
+    text-align: center;
+    justify-content: center;
+    width: 32.5rem;
+    margin: 0 auto;
+  }
+`;
+
+const Button = styled.button`
+  display: block;
+  width: 16rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  ${cssFontSize}
   background: var(--gradient-primary);
-  width: 100vw;
-  text-align: center;
-  vertical-align: middle;
-  color: var(--color-heading-primary);
-  border-radius: 5px 5px 0px 0px;
-  margin: 3rem 0;
-  padding: 0.5rem 0 1rem 0;
-`;
-
-const H1 = styled.h1`
-  font-size: 2.2rem;
-  line-height: 1.3;
-`;
-
-const H2 = styled.h2`
-  font-size: 1.359rem;
+  border-radius: var(--border-radius-button);
+  border: none;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  :hover {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.5);
+  }
+  transition: all 0.3s;
+  a:link,
+  a:visited {
+    display: block;
+    color: var(--color-heading-primary);
+    font-size: var(--font-size-text);
+    text-decoration: none;
+  }
 `;
 
 AboutMe.propTypes = {};

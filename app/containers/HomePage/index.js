@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import TopBar from '../../components/Homepage/TopBar/Loadable';
 import Slider from '../../components/Homepage/SliderContainer/Loadable';
 import AboutMe from '../../components/Homepage/AboutMe/Loadable';
+import Projects from '../../components/Homepage/Projects/Loadable';
 import squairy from '../../images/squairy_light.png';
 
 function Homepage() {
@@ -16,6 +17,7 @@ function Homepage() {
       <TopBar />
       <Slider />
       <AboutMe />
+      <Projects />
     </Container>
   );
 }

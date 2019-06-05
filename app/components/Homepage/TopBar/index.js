@@ -30,6 +30,8 @@ const Div = styled.div`
   margin-top: 1rem;
   justify-content: space-between;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
 `;
 
 const ObjectIconGit = styled.object`
