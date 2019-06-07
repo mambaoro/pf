@@ -7,14 +7,14 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import github from '../../images/svg/icons8-github.svg';
+import SvgGitHub from '../GithubIcon/Loadable';
 import filled from '../../images/svg/icons8-menu-filled.svg';
 
 function TopBar() {
   return (
     <Div>
       <LinkIconMenu href="https://github.com/mambaoro" target="_blank">
-        <ObjectIconGit data={github} type="image/svg+xml" />
+        <SvgGitHub />
       </LinkIconMenu>
       <LinkIconMenu href="#">
         <ObjectIconMenu data={filled} type="image/svg+xml" />
@@ -34,14 +34,6 @@ const Div = styled.div`
   top: 0;
   width: 90%;
   z-index: 100;
-`;
-
-const ObjectIconGit = styled.object`
-  display: block;
-  width: 4.8rem;
-  height: 4.8rem;
-  margin-left: -4px;
-  pointer-events: none;
 `;
 
 const LinkIconMenu = styled.a`

@@ -45,3 +45,43 @@ export function cssDivHeadings() {
     }
   `;
 }
+
+export function cssDivList() {
+  return css`
+    background: var(--gradient-primary);
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+  `;
+}
+
+export function cssULList() {
+  return css`
+    background-color: var(--bg-text-primary);
+    font-size: var(--font-size-text-list);
+    color: var(--color-text-primary);
+    padding: 1.5rem;
+    article {
+      :not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      li {
+        list-style: none;
+        vertical-align: middle;
+        text-align: center;
+        p {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  `;
+}
+
+export function cssDropArrow() {
+  return css`
+    color: var(--color-text-button);
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    cursor: pointer;
+  `;
+}

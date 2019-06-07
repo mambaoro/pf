@@ -12,6 +12,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ApolloProvider } from 'react-apollo';
+import { Provider } from 'unstated';
 import 'sanitize.css/sanitize.css';
 import FontFaceObserver from 'fontfaceobserver';
 // Import root app
@@ -43,7 +44,9 @@ const render = () => {
   ReactDOM.render(
     <ApolloProvider client={client}>
       <Router>
-        <App />
+        <Provider>
+          <App />
+        </Provider>
       </Router>
     </ApolloProvider>,
     MOUNT_NODE,

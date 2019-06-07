@@ -1,10 +1,11 @@
 const quoteList = [
   'User Interface with React',
   'CSS without Bootstrap',
-  'Remote data with Apollo',
-  'Server with NodeJS',
-  'Database with Prisma 2',
+  'GraphQL & Apollo',
+  'Back-end with NodeJS',
+  'Database with SQL and Prisma',
   'Deployment with Heroku',
+  'Design with Figma',
 ];
 
 export default quoteList;

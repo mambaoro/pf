@@ -7,6 +7,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import v4 from 'uuid/v4';
 import Slider from 'react-slick';
 import quoteList from './quoteList';
 
@@ -25,7 +26,7 @@ function SliderContainer() {
     <Section>
       <Slider {...settings}>
         {quoteList.map(quote => (
-          <div>
+          <div key={v4()}>
             <p>&ldquo;{quote}&rdquo;</p>
           </div>
         ))}

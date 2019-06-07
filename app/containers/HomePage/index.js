@@ -9,6 +9,7 @@ import TopBar from '../../components/TopBar/Loadable';
 import Slider from '../../components/Homepage/SliderContainer/Loadable';
 import AboutMe from '../../components/Homepage/AboutMe/Loadable';
 import Projects from '../../components/Homepage/Projects/Loadable';
+import Skills from '../../components/Homepage/Skills/Loadable';
 
 function Homepage() {
   return (
@@ -17,6 +18,7 @@ function Homepage() {
       <Slider />
       <AboutMe />
       <Projects />
+      <Skills />
     </Container>
   );
 }
