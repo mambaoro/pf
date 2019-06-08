@@ -85,3 +85,19 @@ export function cssDropArrow() {
     cursor: pointer;
   `;
 }
+
+// button
+
+export function cssSmallButton() {
+  return css`
+    background: var(--gradient-primary);
+    color: var(--color-heading-primary);
+    border-radius: var(--border-radius-button);
+    font-size: var(--font-size-text);
+    padding: 0.5rem 1rem;
+    :hover {
+      background: var(--bg-button);
+      color: var(--color-text-button);
+    }
+  `;
+}

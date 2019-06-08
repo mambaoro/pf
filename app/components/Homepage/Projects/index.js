@@ -10,7 +10,12 @@ import styled from 'styled-components';
 import AOS from 'aos';
 import v4 from 'uuid/v4';
 import 'aos/dist/aos.css';
-import { cssDivHeadings, cssDivList, cssULList } from '../../../base';
+import {
+  cssDivHeadings,
+  cssDivList,
+  cssULList,
+  cssSmallButton,
+} from '../../../base';
 import projectList from './projectList';
 
 AOS.init();
@@ -89,15 +94,7 @@ const DivLinks = styled.div`
     line-height: 1;
     cursor: pointer;
     &.heroku {
-      background: var(--gradient-primary);
-      color: var(--color-heading-primary);
-      border-radius: var(--border-radius-button);
-      font-size: var(--font-size-text);
-      padding: 0.5rem 1rem;
-      :hover {
-        background: var(--bg-button);
-        color: var(--color-text-button);
-      }
+      ${cssSmallButton}
     }
     svg {
       width: 4rem;

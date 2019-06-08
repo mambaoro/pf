@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
     --color-heading-primary: #e0e0e0;
     --color-text-primary: #585858;
     --color-text-button: #4E4376;
+    --color-gradient-1: #2B5876;
+    --color-react: #60DBFB;
 
     --gradient-primary: linear-gradient(90deg, #2B5876 0%, #4E4376 100%);
 

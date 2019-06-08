@@ -91,12 +91,12 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-intl": "^2.9.0",
+    "react-pose": "^4.0.8",
     "react-router-dom": "^5.0.0",
     "react-slick": "^0.24.0",
     "sanitize.css": "^9.0.0",
     "styled-components": "^4.2.1",
     "unstated": "^2.1.1",
-    "unstated-next": "^1.1.0",
     "validator": "^11.0.0",
     "warning": "^4.0.3"
   },
