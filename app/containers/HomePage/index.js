@@ -10,6 +10,9 @@ import Slider from '../../components/Homepage/SliderContainer/Loadable';
 import AboutMe from '../../components/Homepage/AboutMe/Loadable';
 import Projects from '../../components/Homepage/Projects/Loadable';
 import Skills from '../../components/Homepage/Skills/Loadable';
+import Contact from '../../components/Contact/Loadable';
+import Sidebar from '../../components/Sidebar/Loadable';
+import { cssPageContainer } from '../../base';
 
 function Homepage() {
   return (
@@ -19,15 +22,15 @@ function Homepage() {
       <AboutMe />
       <Projects />
       <Skills />
+      <Contact />
+      <Sidebar />
     </Container>
   );
 }
 
 const Container = styled.div`
-  background-image: linear-gradient(
-    rgba(230, 233, 240, 0.8),
-    rgba(230, 233, 240, 0.8)
-  );
+  ${cssPageContainer}
+  padding: 0;
   background-size: cover, contain;
   background-position: center, top center;
   display: grid;

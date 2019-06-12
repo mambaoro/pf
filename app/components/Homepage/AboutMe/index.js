@@ -39,7 +39,9 @@ const cssFontSize = css`
   font-size: var(--font-size-text);
 `;
 
-const Section = styled.section``;
+const Section = styled.section`
+  margin-bottom: 3rem;
+`;
 
 const DivHeadings = styled.div`
   ${cssDivHeadings}

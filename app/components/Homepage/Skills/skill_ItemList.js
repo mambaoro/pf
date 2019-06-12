@@ -1,7 +1,7 @@
 const frontEndSkills = [
   'JavaScript and React',
   'Apollo Client',
-  'CSS',
+  'CSS & CSS-in-JS',
   'GraphQL',
   'Animation',
   'Testing',

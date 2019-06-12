@@ -54,6 +54,9 @@ function Projects() {
                     </a>
                   </p>
                 </DivLinks>
+                <ParagraphDescription>
+                  {project.description}
+                </ParagraphDescription>
               </li>
             </article>
           ))}
@@ -87,7 +90,6 @@ const DivLinks = styled.div`
   margin: 0 auto;
   width: 50%;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-heading-primary);
   a {
     display: inline-block;
     text-decoration: none;
@@ -102,6 +104,12 @@ const DivLinks = styled.div`
       pointer-events: none;
     }
   }
+`;
+
+const ParagraphDescription = styled.p`
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--color-heading-primary);
 `;
 
 Projects.propTypes = {};

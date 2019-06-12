@@ -11,12 +11,14 @@
  */
 
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import posed from 'react-pose';
 import { Subscribe } from 'unstated';
+import v4 from 'uuid/v4';
 import AOS from 'aos';
 import DropFE from './DropFE';
 import DropBE from './DropBE';
@@ -53,9 +55,15 @@ function Skills() {
                 </li>
                 <ULSkillList pose={!dropFE.state.isDropped ? 'closed' : 'open'}>
                   {frontEndSkills.map(skill => (
-                    <ListSkillItem>{skill}</ListSkillItem>
+                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
                   ))}
-                  <ButtonSkillPage href="#">See details</ButtonSkillPage>
+                  <NavLink
+                    to="front-end"
+                    exact
+                    style={{ display: !dropFE.state.isDropped ? 'none' : '' }}
+                  >
+                    See details
+                  </NavLink>
                 </ULSkillList>
               </article>
               <article>
@@ -67,9 +75,15 @@ function Skills() {
                 </li>
                 <ULSkillList pose={!dropBE.state.isDropped ? 'closed' : 'open'}>
                   {backEndSkills.map(skill => (
-                    <ListSkillItem>{skill}</ListSkillItem>
+                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
                   ))}
-                  <ButtonSkillPage href="#">See details</ButtonSkillPage>
+                  <NavLink
+                    to="/back-end"
+                    exact
+                    style={{ display: !dropBE.state.isDropped ? 'none' : '' }}
+                  >
+                    See details
+                  </NavLink>
                 </ULSkillList>
               </article>
               <article>
@@ -81,9 +95,15 @@ function Skills() {
                 </li>
                 <ULSkillList pose={!dropUX.state.isDropped ? 'closed' : 'open'}>
                   {uiuxSkills.map(skill => (
-                    <ListSkillItem>{skill}</ListSkillItem>
+                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
                   ))}
-                  <ButtonSkillPage href="#">See details</ButtonSkillPage>
+                  <NavLink
+                    to="ui-design"
+                    exact
+                    style={{ display: !dropUX.state.isDropped ? 'none' : '' }}
+                  >
+                    See details
+                  </NavLink>
                 </ULSkillList>
               </article>
             </ULList>
@@ -110,12 +130,13 @@ const DivListProjects = styled.div`
 
 const ULList = styled.ul`
   ${cssULList}
+  overflow: hidden;
   article {
+    margin-bottom: 0 !important;
     li {
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
       p {
         margin: 0;
         margin-right: 1.5rem;
@@ -126,13 +147,19 @@ const ULList = styled.ul`
 `;
 
 const posedListProps = {
-  closed: { height: 0, duration: 150 },
+  closed: {
+    height: 0,
+    duration: 150,
+    overflow: 'hidden',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   open: { height: 'auto' },
 };
 
 const posedItemProps = {
   closed: { opacity: 0, height: 0 },
-  open: { opacity: 1, height: 'auto' },
+  open: { opacity: 1, height: 'auto', delay: 150 },
 };
 
 const ULSkillList = styled(posed.ul(posedListProps))`
@@ -163,7 +190,6 @@ const ULSkillList = styled(posed.ul(posedListProps))`
 
 const ListSkillItem = posed.li(posedItemProps);
 
-const ButtonSkillPage = posed.a(posedItemProps);
 Skills.propTypes = {};
 
 export default Skills;

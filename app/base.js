@@ -101,3 +101,16 @@ export function cssSmallButton() {
     }
   `;
 }
+
+// Global background
+
+export function cssPageContainer() {
+  return css`
+    background-image: linear-gradient(
+      rgba(230, 233, 240, 1),
+      rgba(230, 233, 240, 1)
+    );
+    display: grid;
+    padding-top: calc(3rem + 4.8rem);
+  `;
+}

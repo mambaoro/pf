@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
     --color-text-button: #4E4376;
     --color-gradient-1: #2B5876;
     --color-react: #60DBFB;
+    --color-node: #8BC500;
+    --color-figma: #A259FF;
+    --color-breadcrumb: #bfbfbf;
 
     --gradient-primary: linear-gradient(90deg, #2B5876 0%, #4E4376 100%);
 
