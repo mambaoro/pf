@@ -7,10 +7,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Subscribe } from 'unstated';
 import posed from 'react-pose';
 import SidebarContainer from './StateSidebar';
+import { media, bp } from '../../base';
 
 function Sidebar() {
   const [ListIsActive, setListActive] = useState(false);
@@ -85,6 +86,10 @@ function Sidebar() {
   );
 }
 
+const css1Bp500 = css`
+  width: 60vw;
+`;
+
 const posedNavProps = {
   closed: { x: '-100%', transition: { ease: 'easeInOut' }, opacity: 0 },
   open: { x: '0%', transition: { ease: 'easeInOut' }, opacity: 1 },
@@ -110,34 +115,21 @@ const NavSideBar = styled(posed.nav(posedNavProps))`
     border-bottom: 1px solid var(--color-heading-primary);
     p,
     a {
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-      padding-top: 43%;
-    }
-    a {
-      display: block;
-      text-decoration: none;
       color: inherit;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: middle;
     }
-    a.home {
-      padding-left: 38%;
-    }
-    a.about-me {
-      padding-left: 29%;
-    }
-    p.skills {
-      padding-left: 39%;
-    }
+
     .active {
-      background-color: palevioletred;
-      color: #fafafa;
+      color: #ffc0cb;
     }
     :hover {
       background-color: var(--bg-text-primary);
       color: var(--color-text-primary);
     }
   }
+  ${media(css1Bp500, bp.bp500)}
 `;
 
 const DivSkills = styled.div`
@@ -151,12 +143,8 @@ const DivSkills = styled.div`
       text-align: center;
       display: grid;
       a {
-        display: block;
-        padding-top: 10%;
-        .active {
-          background-color: palevioletred;
-          color: #fafafa;
-        }
+        text-align: center;
+        margin: auto 0;
         :hover {
           text-decoration: underline;
         }

@@ -1,18 +1,17 @@
 import { css } from 'styled-components';
 
-// const media = (content, breakpoint) => {
-//     return css`
-//         @media only screen and (max-width: ${breakpoint}) {
-//             ${content}
-//         }
-//     `;
-// }
+const media = (content, breakpoint) => css`
+  @media only screen and (min-width: ${breakpoint}) {
+    ${content}
+  }
+`;
 
-// const bp = {
-//     bp1200: '75em', // Example
-// };
+const bp = {
+  bp500: '31.25em', // 500px
+  bp600: '37.5em', // 600px
+};
 
-// export { media, bp };
+export { media, bp };
 
 const cssH1Heading = css`
   font-size: 2.588rem;

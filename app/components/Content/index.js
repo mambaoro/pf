@@ -6,28 +6,65 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import v4 from 'uuid/v4';
 
-import { cssDivList, cssDivHeadings } from '../../base';
+import { cssDivList, cssDivHeadings, media, bp } from '../../base';
 
 function Content(props) {
   return (
     <ListSkills>
       {props.skillList.map(skill => (
         <ListItemSkill key={v4()}>
-          <DivHeadings>
+          <DivHeadings className="headings">
             <h1>{skill.heading}</h1>
             <h2>{skill.subheading}</h2>
           </DivHeadings>
-          <DivDescription>{skill.description}</DivDescription>
+          <DivDescription className="description">
+            <p>{skill.description}</p>
+          </DivDescription>
         </ListItemSkill>
       ))}
     </ListSkills>
   );
 }
 
-const ListSkills = styled.ul``;
+const css1Bp600 = css`
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100vw;
+  li {
+    min-height: 31.1rem;
+    max-height: 31.1rem;
+    div {
+      max-width: 48vw;
+    }
+    div.description {
+      padding-top: 1.5rem;
+      p {
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+    div.headings {
+      padding-top: 1.5rem;
+      min-height: 8.8rem;
+      max-height: 8.8rem;
+    }
+  }
+`;
+
+const css2Bp600 = css`
+  :nth-child(-n + 2) {
+    margin-top: 3rem;
+  }
+`;
+
+const ListSkills = styled.ul`
+  ${media(css1Bp600, bp.bp600)}
+`;
 
 const ListItemSkill = styled.li`
   :first-child {
@@ -35,6 +72,7 @@ const ListItemSkill = styled.li`
   }
   margin: 0 auto;
   list-style: none;
+  ${media(css2Bp600, bp.bp600)}
 `;
 
 const DivHeadings = styled.div`

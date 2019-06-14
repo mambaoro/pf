@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
     --color-breadcrumb: #bfbfbf;
 
     --gradient-primary: linear-gradient(90deg, #2B5876 0%, #4E4376 100%);
+    --gradient-primary-button-active: linear-gradient(90deg, #2B5890 0%, #4E4398 100%);
+    --gradient-secondary: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    --gradient-secondary-button-active: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+  
 
     --bg-text-primary: #fafafa;
     --bg-button: #ADFF2F;

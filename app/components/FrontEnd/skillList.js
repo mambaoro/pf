@@ -7,7 +7,7 @@ const skillList = [
   },
   {
     heading: 'Apollo Client',
-    subheading: 'Remote data management with GraphQL',
+    subheading: 'Remote data with GraphQL',
     description:
       'First I learned Redux, then I got fascinated by GraphQL and decided to go for it. Apollo Client is now my preferred way of doing state management with remote data. Thankfully Apollo Client led me to fullstack web development thanks to its counterpart Apollo Server with NodeJS.',
   },

@@ -6,8 +6,8 @@
 
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { cssDivHeadings, cssDivList } from '../../base';
+import styled, { css } from 'styled-components';
+import { cssDivHeadings, cssDivList, media, bp } from '../../base';
 import SvgGithub from '../GithubIcon/Loadable';
 
 function Contact() {
@@ -17,7 +17,9 @@ function Contact() {
         <h1>Contact</h1>
       </DivHeadings>
       <DivContent>
-        <a href="mailto: mam.baoro@outlook.fr">mam.baoro@outlook.fr</a>
+        <a href="mailto: mam.baoro@outlook.fr" className="email">
+          mam.baoro@outlook.fr
+        </a>
         <a
           href="https://drive.google.com/open?id=1fg6kpB56vvgRcAjYCjjgLCghJyQQszfW"
           className="resume"
@@ -37,6 +39,21 @@ function Contact() {
     </Section>
   );
 }
+
+const css1Bp500 = css`
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
+  grid-row-gap: 2rem;
+  a,
+  p {
+    margin-bottom: 0;
+  }
+`;
+
+const css2Bp500 = css``;
 
 const Section = styled.section`
   margin-bottom: 0;
@@ -66,6 +83,9 @@ const DivContent = styled.div`
       color: var(--bg-button);
     }
   }
+  a.email {
+    ${media(css2Bp500, bp.bp500)}
+  }
   a.github {
     border: none;
     margin-bottom: 0;
@@ -79,6 +99,7 @@ const DivContent = styled.div`
     display: block;
     margin: 0 auto;
   }
+  ${media(css1Bp500, bp.bp500)}
 `;
 
 Contact.propTypes = {};

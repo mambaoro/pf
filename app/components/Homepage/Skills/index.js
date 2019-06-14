@@ -15,7 +15,7 @@ import { NavLink } from 'react-router-dom';
 
 // import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import posed from 'react-pose';
 import { Subscribe } from 'unstated';
 import v4 from 'uuid/v4';
@@ -30,6 +30,8 @@ import {
   cssDivList,
   cssULList,
   cssSmallButton,
+  media,
+  bp,
 } from '../../../base';
 import { frontEndSkills, backEndSkills, uiuxSkills } from './skill_ItemList';
 
@@ -114,6 +116,23 @@ function Skills() {
   );
 }
 
+const css1Bp500 = css`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+const css2Bp500 = css`
+  display: flex;
+  flex-direction: column;
+  li {
+    padding-top: 1rem;
+  }
+  a {
+    margin: 1.5rem auto;
+  }
+`;
+
 const Section = styled.section``;
 
 const DivHeadings = styled.div`
@@ -144,6 +163,7 @@ const ULList = styled.ul`
       }
     }
   }
+  ${media(css1Bp500, bp.bp500)}
 `;
 
 const posedListProps = {
@@ -186,6 +206,7 @@ const ULSkillList = styled(posed.ul(posedListProps))`
     text-decoration: none;
     padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   }
+  ${media(css2Bp500, bp.bp500)}
 `;
 
 const ListSkillItem = posed.li(posedItemProps);
