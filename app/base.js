@@ -9,6 +9,7 @@ const media = (content, breakpoint) => css`
 const bp = {
   bp500: '31.25em', // 500px
   bp600: '37.5em', // 600px
+  bp800: '50em', // 800px
 };
 
 export { media, bp };

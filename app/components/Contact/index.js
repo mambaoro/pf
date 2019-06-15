@@ -40,10 +40,10 @@ function Contact() {
   );
 }
 
-const css1Bp500 = css`
+const css1Bp600 = css`
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: space-evenly;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-around;
   align-items: center;
   justify-items: center;
   grid-row-gap: 2rem;
@@ -51,9 +51,13 @@ const css1Bp500 = css`
   p {
     margin-bottom: 0;
   }
+  a.resume {
+    margin-right: 4rem;
+    margin-left: 1.5rem;
+  }
 `;
 
-const css2Bp500 = css``;
+const css2Bp600 = css``;
 
 const Section = styled.section`
   margin-bottom: 0;
@@ -84,7 +88,7 @@ const DivContent = styled.div`
     }
   }
   a.email {
-    ${media(css2Bp500, bp.bp500)}
+    ${media(css2Bp600, bp.bp600)}
   }
   a.github {
     border: none;
@@ -99,7 +103,7 @@ const DivContent = styled.div`
     display: block;
     margin: 0 auto;
   }
-  ${media(css1Bp500, bp.bp500)}
+  ${media(css1Bp600, bp.bp600)}
 `;
 
 Contact.propTypes = {};

@@ -122,7 +122,7 @@ const NavSideBar = styled(posed.nav(posedNavProps))`
     }
 
     .active {
-      color: #ffc0cb;
+      color: var(--color-special-link);
     }
     :hover {
       background-color: var(--bg-text-primary);

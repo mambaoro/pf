@@ -152,6 +152,7 @@ const ULList = styled.ul`
   overflow: hidden;
   article {
     margin-bottom: 0 !important;
+    padding-top: 1.5rem;
     li {
       display: flex;
       justify-content: center;

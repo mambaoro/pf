@@ -8,12 +8,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import v4 from 'uuid/v4';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { cssDivList, cssDivHeadings, media, bp } from '../../base';
+
+AOS.init();
 
 function Content(props) {
   return (
-    <ListSkills>
+    <ListSkills data-aos="fade-right">
       {props.skillList.map(skill => (
         <ListItemSkill key={v4()}>
           <DivHeadings className="headings">
@@ -31,27 +34,26 @@ function Content(props) {
 
 const css1Bp600 = css`
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  grid-column-gap: 1rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: 100vw;
+  grid-template-columns: min-content;
+  justify-content: center;
   li {
     min-height: 31.1rem;
     max-height: 31.1rem;
+    max-width: 37.5rem;
     div {
-      max-width: 48vw;
+      max-width: 37.5rem;
     }
     div.description {
       padding-top: 1.5rem;
       p {
         max-height: 20rem;
         overflow-y: auto;
-    }
-    div.headings {
-      padding-top: 1.5rem;
-      min-height: 8.8rem;
-      max-height: 8.8rem;
+      }
+      div.headings {
+        padding-top: 1.5rem;
+        min-height: 8.8rem;
+        max-height: 8.8rem;
+      }
     }
   }
 `;
@@ -62,8 +64,13 @@ const css2Bp600 = css`
   }
 `;
 
+const css1Bp800 = css`
+  grid-template-columns: repeat(2, 1fr);
+`;
+
 const ListSkills = styled.ul`
   ${media(css1Bp600, bp.bp600)}
+  ${media(css1Bp800, bp.bp800)}
 `;
 
 const ListItemSkill = styled.li`

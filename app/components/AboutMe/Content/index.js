@@ -6,8 +6,8 @@
 
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { cssDivHeadings, cssDivList } from '../../../base';
+import styled, { css } from 'styled-components';
+import { cssDivHeadings, cssDivList, media, bp } from '../../../base';
 
 function Content() {
   return (
@@ -42,6 +42,10 @@ function Content() {
   );
 }
 
+const css1Bp600 = css`
+  width: 75%;
+`;
+
 const Main = styled.main``;
 
 const DivHeadings = styled.div`
@@ -58,6 +62,7 @@ const DivText = styled.div`
     text-align: center;
     width: 90%;
     margin: 0 auto;
+    ${media(css1Bp600, bp.bp600)}
   }
 `;
 

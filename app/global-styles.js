@@ -10,11 +10,12 @@ const GlobalStyle = createGlobalStyle`
     --color-node: #8BC500;
     --color-figma: #A259FF;
     --color-breadcrumb: #bfbfbf;
+    --color-special-link: #ffc0cb;
 
     --gradient-primary: linear-gradient(90deg, #2B5876 0%, #4E4376 100%);
     --gradient-primary-button-active: linear-gradient(90deg, #2B5890 0%, #4E4398 100%);
     --gradient-secondary: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-    --gradient-secondary-button-active: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --gradient-secondary-button-active: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 
   
 
