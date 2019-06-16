@@ -127,6 +127,7 @@ const Div = styled.div`
   font-weight: 900;
   margin-bottom: 3rem;
   border-radius: 0 0 5px 5px;
+  box-shadow: var(--shadow);
   svg {
     flex-basis: 10%;
   }

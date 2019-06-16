@@ -11,7 +11,7 @@ const projectList = [
     linkGitHub: '#',
     linkHeroku: '#',
     description:
-      'Feature a realtime chat app built with NodeJS, Apollo and PostgreSQL',
+      'Feature a realtime chat app built with NodeJS, Apollo and Postgres',
   },
   {
     label: 'Auth app with Auth0',

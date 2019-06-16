@@ -34,12 +34,11 @@ function Content(props) {
 
 const css1Bp600 = css`
   display: grid;
-  grid-template-columns: min-content;
+  grid-template-columns: max-content;
   justify-content: center;
   li {
-    min-height: 31.1rem;
-    max-height: 31.1rem;
     max-width: 37.5rem;
+    margin-top: 1.5rem;
     div {
       max-width: 37.5rem;
     }
@@ -68,9 +67,21 @@ const css1Bp800 = css`
   grid-template-columns: repeat(2, 1fr);
 `;
 
+const css1Bp1200 = css`
+  grid-template-columns: repeat(3, 1fr);
+`;
+
+const css2Bp1200 = css`
+  :nth-child(-n + 3) {
+    margin-top: 3rem;
+  }
+`;
+
 const ListSkills = styled.ul`
   ${media(css1Bp600, bp.bp600)}
   ${media(css1Bp800, bp.bp800)}
+  ${media(css1Bp1200, bp.bp1200)}
+  align-self: center;
 `;
 
 const ListItemSkill = styled.li`
@@ -79,11 +90,15 @@ const ListItemSkill = styled.li`
   }
   margin: 0 auto;
   list-style: none;
+  box-shadow: var(--shadow);
   ${media(css2Bp600, bp.bp600)}
+  ${media(css2Bp1200, bp.bp1200)}
 `;
 
 const DivHeadings = styled.div`
   ${cssDivHeadings}
+  padding: 1.5rem 0 0 0;
+  min-height: 9.4rem;
   margin-top: 0 !important;
   h2 {
     width: 60%;

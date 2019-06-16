@@ -92,10 +92,15 @@ const cssFontSize = css`
 const Section = styled.section`
   margin-bottom: 3rem;
   ${media(css1Bp500, bp.bp500)}
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 96rem;
+  box-shadow: var(--shadow);
 `;
 
 const DivHeadings = styled.div`
   ${cssDivHeadings}
+  margin-top: 0;
   ${media(css2Bp500, bp.bp500)}
   ${media(css3Bp500, bp.bp500)}
 `;

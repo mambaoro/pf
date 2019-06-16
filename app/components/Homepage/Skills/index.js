@@ -133,7 +133,9 @@ const css2Bp500 = css`
   }
 `;
 
-const Section = styled.section``;
+const Section = styled.section`
+  box-shadow: var(--shadow);
+`;
 
 const DivHeadings = styled.div`
   ${cssDivHeadings}

@@ -82,11 +82,18 @@ function SkillsDesktop() {
 }
 
 const Div = styled.div`
+  position: relative;
   display: flex;
+  min-width: 96rem;
+  max-width: 96rem;
+  margin: 3rem auto;
+  margin-bottom: 0;
   article {
     div.heading {
       ${cssDivHeadings};
+      margin-top: 0;
     }
+    box-shadow: var(--shadow);
     div.button-container {
       ${cssDivHeadings}
       display: flex;
@@ -128,7 +135,7 @@ const Div = styled.div`
         align-self: start;
         list-style: none;
         :not(:last-child) {
-          margin-bottom: 1.5rem;
+          margin-bottom: 1rem;
           font-size: 1.9rem;
         }
       }

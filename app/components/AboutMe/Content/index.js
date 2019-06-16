@@ -49,10 +49,13 @@ const css1Bp600 = css`
 const Main = styled.main`
   max-width: 96rem;
   margin: 0 auto;
+  box-shadow: var(--shadow);
+  margin-top: 3rem;
 `;
 
 const DivHeadings = styled.div`
   ${cssDivHeadings}
+  margin-top: 0;
 `;
 
 const DivText = styled.div`
@@ -62,7 +65,7 @@ const DivText = styled.div`
     padding-top: 1.5rem;
     font-size: var(--font-size-text);
     color: var(--color-text-primary);
-    text-align: center;
+    text-align: left;
     width: 90%;
     max-width: 42.5rem;
     margin: 0 auto;

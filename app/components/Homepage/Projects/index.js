@@ -75,11 +75,16 @@ const css1Bp1000 = css`
 `;
 
 const css2Bp1000 = css`
-  min-width: 9.6rem;
+  min-width: 96rem;
 `;
 
 const Section = styled.section`
   ${media(css2Bp1000, bp.bp1000)}
+  position: relative;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
 `;
 
 const DivHeadings = styled.div`

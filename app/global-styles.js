@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
 
     --font-size-text: 1.6rem;
     --font-size-text-list: 2rem;
+
+    --shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   }
   
   *,

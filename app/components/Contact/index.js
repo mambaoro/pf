@@ -61,6 +61,10 @@ const css2Bp600 = css``;
 
 const Section = styled.section`
   margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  max-width: 96rem;
+  justify-self: center;
 `;
 
 const DivHeadings = styled.div`

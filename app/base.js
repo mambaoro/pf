@@ -11,6 +11,7 @@ const bp = {
   bp600: '37.5em', // 600px
   bp800: '50em', // 800px
   bp1000: '62.5em', // 1000px
+  bp1200: '75em', // 1200px
 };
 
 export { media, bp };
