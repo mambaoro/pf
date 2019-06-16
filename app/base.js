@@ -10,6 +10,7 @@ const bp = {
   bp500: '31.25em', // 500px
   bp600: '37.5em', // 600px
   bp800: '50em', // 800px
+  bp1000: '62.5em', // 1000px
 };
 
 export { media, bp };
@@ -28,7 +29,7 @@ const cssH2Heading = css`
 export function cssDivHeadings() {
   return css`
     background: var(--gradient-primary);
-    width: 100vw;
+    width: 100%;
     min-height: 6.458rem;
     text-align: center;
     vertical-align: middle;

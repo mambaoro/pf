@@ -18,7 +18,7 @@ const projectList = [
     linkGitHub: '#',
     linkHeroku: '#',
     description:
-      'Feature a secure and complete user authentication system built with NodeJS and Auth0',
+      'Feature a secure user authentication system built with NodeJS and Auth0',
   },
   {
     label: 'Adblock detection app',

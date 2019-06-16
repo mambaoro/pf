@@ -13,12 +13,15 @@ import GithubIcon from '../GithubIcon/Loadable';
 function TopNavBar() {
   const [isOpen, setToggle] = useState(null);
   const dropdownMenu = useRef();
+  const handleClick = e => {
+    if (dropdownMenu.current && !dropdownMenu.current.contains(e.target)) {
+      setToggle(!isOpen);
+    }
+  };
   // eslint-disable-next-line consistent-return
   const showMenu = () => {
     setToggle(true);
-    document.addEventListener('click', e => {
-      if (!dropdownMenu.current.contains(e.target)) setToggle(false);
-    });
+    document.addEventListener('click', handleClick);
   };
   return (
     <Div>

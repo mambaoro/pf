@@ -6,7 +6,7 @@
 
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import AOS from 'aos';
 import v4 from 'uuid/v4';
 import 'aos/dist/aos.css';
@@ -15,6 +15,8 @@ import {
   cssDivList,
   cssULList,
   cssSmallButton,
+  media,
+  bp,
 } from '../../../base';
 import projectList from './projectList';
 
@@ -66,7 +68,19 @@ function Projects() {
   );
 }
 
-const Section = styled.section``;
+const css1Bp1000 = css`
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+`;
+
+const css2Bp1000 = css`
+  min-width: 9.6rem;
+`;
+
+const Section = styled.section`
+  ${media(css2Bp1000, bp.bp1000)}
+`;
 
 const DivHeadings = styled.div`
   ${cssDivHeadings}
@@ -83,13 +97,17 @@ const DivListProjects = styled.div`
 
 const ULList = styled.ul`
   ${cssULList}
+  ${media(css1Bp1000, bp.bp1000)}
+  li {
+    margin-right: 1.5rem;
+  }
 `;
 
 const DivLinks = styled.div`
   display: flex;
   margin: 0 auto;
   width: 50%;
-  justify-content: space-between;
+  justify-content: space-around;
   a {
     display: inline-block;
     text-decoration: none;

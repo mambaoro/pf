@@ -42,7 +42,7 @@ const css1Bp500 = css`
 `;
 
 const css2Bp500 = css`
-  width: 50vw;
+  width: 50%;
   border-radius: 0;
   min-height: 24rem;
   max-height: 24rem;
