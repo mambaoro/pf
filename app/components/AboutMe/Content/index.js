@@ -7,11 +7,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { cssDivHeadings, cssDivList, media, bp } from '../../../base';
+
+AOS.init();
 
 function Content() {
   return (
-    <Main>
+    <Main data-aos="fade-right">
       <DivHeadings>
         <h1>Mamadou Baoro</h1>
         <h2>About me</h2>
@@ -56,13 +60,18 @@ const Main = styled.main`
 const DivHeadings = styled.div`
   ${cssDivHeadings}
   margin-top: 0;
+  padding-top: 7.5rem;
+  padding-bottom: 0;
+  min-height: 20rem;
 `;
 
 const DivText = styled.div`
   ${cssDivList}
   background: var(--bg-text-primary);
+  padding-bottom: 2.5rem;
   p {
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 0;
     font-size: var(--font-size-text);
     color: var(--color-text-primary);
     text-align: left;

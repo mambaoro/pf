@@ -6,17 +6,21 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import AOS from 'aos';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import v4 from 'uuid/v4';
+import 'aos/dist/aos.css';
 import { cssDivHeadings, cssULList, cssSmallButton } from '../../../base';
 import { frontEndSkills, backEndSkills, uiuxSkills } from './skill_ItemList';
+
+AOS.init();
 
 function SkillsDesktop() {
   return (
     <section>
       <Div>
-        <article>
+        <article data-aos="flip-right">
           <div className="heading">
             <h1>Front-End</h1>
           </div>
@@ -36,7 +40,7 @@ function SkillsDesktop() {
             </NavLink>
           </div>
         </article>
-        <article>
+        <article data-aos="flip-right">
           <div className="heading">
             <h1>Back-End</h1>
           </div>
@@ -56,7 +60,7 @@ function SkillsDesktop() {
             </NavLink>
           </div>
         </article>
-        <article>
+        <article data-aos="flip-right">
           <div className="heading">
             <h1>UI Design</h1>
           </div>
@@ -93,7 +97,6 @@ const Div = styled.div`
       ${cssDivHeadings};
       margin-top: 0;
     }
-    box-shadow: var(--shadow);
     div.button-container {
       ${cssDivHeadings}
       display: flex;

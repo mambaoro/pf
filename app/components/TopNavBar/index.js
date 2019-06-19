@@ -25,7 +25,9 @@ function TopNavBar() {
   };
   return (
     <Div>
-      <GithubIcon fill="#fafafa" />
+      <a href="https://github.com/mambaoro" target="_blank">
+        <GithubIcon fill="#fafafa" />
+      </a>
       <Nav>
         <ul>
           <li>

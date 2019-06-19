@@ -65,6 +65,7 @@ const css2Bp600 = css`
 
 const css1Bp800 = css`
   grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1.5rem;
 `;
 
 const css1Bp1200 = css`
@@ -77,10 +78,21 @@ const css2Bp1200 = css`
   }
 `;
 
+const css1Bp1800 = css`
+  grid-template-columns: repeat(4, 1fr);
+`;
+
+const css2Bp1800 = css`
+  :nth-child(-n + 4) {
+    margin-top: 3rem;
+  }
+`;
+
 const ListSkills = styled.ul`
   ${media(css1Bp600, bp.bp600)}
   ${media(css1Bp800, bp.bp800)}
   ${media(css1Bp1200, bp.bp1200)}
+  ${media(css1Bp1800, bp.bp1800)}
   align-self: center;
 `;
 
@@ -93,6 +105,7 @@ const ListItemSkill = styled.li`
   box-shadow: var(--shadow);
   ${media(css2Bp600, bp.bp600)}
   ${media(css2Bp1200, bp.bp1200)}
+  ${media(css2Bp1800, bp.bp1800)}
 `;
 
 const DivHeadings = styled.div`
