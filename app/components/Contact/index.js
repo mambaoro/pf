@@ -11,45 +11,6 @@ import { cssDivHeadings, cssDivList, media, bp } from '../../base';
 import SvgGithub from '../GithubIcon/Loadable';
 import SvgIn from '../InIcon';
 
-function Contact() {
-  return (
-    <Section>
-      <DivHeadings>
-        <h1>Contact</h1>
-      </DivHeadings>
-      <DivContent>
-        <a href="mailto: mam.baoro@outlook.fr" className="email">
-          mam.baoro@outlook.fr
-        </a>
-        <a
-          href="https://drive.google.com/open?id=1WBNmGeAoPGO9wgIWuvEeljx3fDjGuOG-"
-          className="resume"
-          target="_blank"
-        >
-          Resume
-        </a>
-        <p>&copy; Site created by Mamadou Baoro - 2019</p>
-        <DivIcons>
-          <a
-            href="https://github.com/mambaoro"
-            className="github"
-            target="_blank"
-          >
-            <SvgGithub fill="#fafafa" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mambaoro/"
-            className="in"
-            target="_blank"
-          >
-            <SvgIn fill="#fafafa" />
-          </a>
-        </DivIcons>
-      </DivContent>
-    </Section>
-  );
-}
-
 const css1Bp600 = css`
   display: grid;
   grid-template-columns: repeat(4, max-content);
@@ -123,6 +84,46 @@ const DivContent = styled.div`
 const DivIcons = styled.div`
   display: flex;
 `;
+
+function Contact() {
+  return (
+    <Section>
+      <DivHeadings>
+        <h1>Contact</h1>
+      </DivHeadings>
+      <DivContent>
+        <a href="mailto: mam.baoro@outlook.fr" className="email">
+          mam.baoro@outlook.fr
+        </a>
+        <a
+          href="https://drive.google.com/open?id=1WBNmGeAoPGO9wgIWuvEeljx3fDjGuOG-"
+          className="resume"
+          target="_blank"
+        >
+          Resume
+        </a>
+        <p>&copy; Site created by Mamadou Baoro - 2019</p>
+        <DivIcons>
+          <a
+            href="https://github.com/mambaoro"
+            className="github"
+            target="_blank"
+          >
+            <SvgGithub fill="#fafafa" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mambaoro/"
+            className="in"
+            target="_blank"
+          >
+            <SvgIn fill="#fafafa" />
+          </a>
+        </DivIcons>
+      </DivContent>
+    </Section>
+  );
+}
+
 Contact.propTypes = {};
 
 export default Contact;
