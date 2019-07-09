@@ -143,15 +143,6 @@ const Div = styled.div`
         }
       }
     }
-    .bull-front-end {
-      color: var(--color-react);
-    }
-    .bull-back-end {
-      color: var(--color-node);
-    }
-    .bull-ui {
-      color: var(--color-figma);
-    }
     .bull-front-end,
     .bull-back-end,
     .bull-ui {

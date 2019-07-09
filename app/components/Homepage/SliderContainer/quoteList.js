@@ -1,10 +1,13 @@
 const quoteList = [
   'User Interface with React',
   'CSS without Bootstrap',
-  'GraphQL with Apollo',
-  'Server with NodeJS',
-  'Any database with Prisma',
+  'REST API with Express',
+  'Apollo and GraphQL',
+  'NodeJS power',
+  'SQL databases',
   'Deployment with Heroku',
+  'Upload with Amazon S3',
+  'Authentication with OAuth',
   'Design with Figma',
 ];
 

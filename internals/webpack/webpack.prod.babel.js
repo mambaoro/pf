@@ -121,11 +121,11 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'React Boilerplate',
-      short_name: 'React BP',
-      description: 'My React Boilerplate-based project!',
+      name: 'Mamadou Baoro Portfolio',
+      short_name: 'Portfolio',
+      description: 'My website and portfolio',
       background_color: '#fafafa',
-      theme_color: '#b1624d',
+      theme_color: '#4E4376',
       inject: true,
       ios: true,
       icons: [

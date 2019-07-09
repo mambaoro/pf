@@ -47,13 +47,16 @@ function Projects() {
                     </svg>
                   </a>
                   <p>
-                    <a
-                      href={project.linkHeroku}
-                      className="heroku"
-                      target="_blank"
-                    >
-                      Live code
-                    </a>
+                    {(project.liveCode && (
+                      <a
+                        href={project.linkHeroku}
+                        className="heroku"
+                        target="_blank"
+                      >
+                        Live code
+                      </a>
+                    )) ||
+                      'You are already here'}
                   </p>
                 </DivLinks>
                 <ParagraphDescription>
@@ -70,7 +73,7 @@ function Projects() {
 
 const css1Bp1000 = css`
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, 50%);
   justify-content: center;
 `;
 
@@ -109,23 +112,27 @@ const ULList = styled.ul`
 `;
 
 const DivLinks = styled.div`
-  display: flex;
+  display: grid;
   margin: 0 auto;
   width: 50%;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
   a {
     display: inline-block;
     text-decoration: none;
-    line-height: 1;
     cursor: pointer;
     &.heroku {
       ${cssSmallButton}
+      align-self: center;
     }
     svg {
       width: 4rem;
       height: 4rem;
       pointer-events: none;
     }
+  }
+  p {
+    font-size: 1.3rem;
   }
 `;
 

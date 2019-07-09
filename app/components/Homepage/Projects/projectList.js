@@ -1,31 +1,43 @@
 const projectList = [
   {
     label: 'Upload app with Amazon S3',
-    linkGitHub: '#',
-    linkHeroku: '#',
+    linkGitHub: 'https://github.com/mambaoro/upload-app-amazon-s3',
+    linkHeroku: 'https://uploadapp.mambaoro.com/',
     description:
-      'Feature an upload system built with NodeJS and cloud storage Amazon S3',
+      'Features an upload system built with NodeJS, cloud storage Amazon S3 and React.',
+    liveCode: true,
   },
   {
-    label: 'Chat app with WebSocket',
-    linkGitHub: '#',
-    linkHeroku: '#',
+    label: 'Authentication app with OAuth',
+    linkGitHub: 'https://github.com/mambaoro/auth-app',
+    linkHeroku: 'https://authapp.mambaoro.com/',
     description:
-      'Feature a realtime chat app built with NodeJS, Apollo and Postgres',
+      'Features a secure user authentication flow built with NodeJS, PassportJS (OAuth), MySQL and React.',
+    liveCode: true,
   },
   {
-    label: 'Auth app with Auth0',
-    linkGitHub: '#',
-    linkHeroku: '#',
+    label: 'Portfolio (this website)',
+    linkGitHub: 'https://github.com/mambaoro/pf',
+    linkHeroku: 'https://mambaoro.com/',
     description:
-      'Feature a secure user authentication system built with NodeJS and Auth0',
+      'You are already looking at my portfolio, but for any reason you may want to see the source code.',
+    liveCode: false,
   },
   {
-    label: 'Adblock detection app',
+    label: 'Email verification app',
     linkGitHub: '#',
     linkHeroku: '#',
     description:
-      'Feature a client adblock detection script built with React and JavaScript',
+      'Features an email verification app built with NodeJS, view engine Pug and React.',
+    liveCode: true,
+  },
+  {
+    label: 'JavaScript doc app',
+    linkGitHub: 'https://github.com/mambaoro/js-doc',
+    linkHeroku: 'https://jsdoc.mambaoro.com/',
+    description:
+      'Features routing and transition animation built with React, Reach Router and Popmotion.',
+    liveCode: true,
   },
 ];
 

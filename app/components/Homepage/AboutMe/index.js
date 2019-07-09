@@ -20,6 +20,7 @@ function AboutMe() {
       <DivHeadings>
         <h1>Mamadou Baoro</h1>
         <h2>Web Developer</h2>
+        <h2>Software Developer</h2>
       </DivHeadings>
       <DivPresentation>
         <p>
@@ -103,6 +104,9 @@ const DivHeadings = styled.div`
   margin-top: 0;
   ${media(css2Bp500, bp.bp500)}
   ${media(css3Bp500, bp.bp500)}
+  h2 {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const DivPresentation = styled.div`

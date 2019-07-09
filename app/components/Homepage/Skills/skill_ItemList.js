@@ -1,19 +1,17 @@
 const frontEndSkills = [
   'JavaScript and React',
-  'Apollo Client',
+  'ApolloGraphQL',
   'CSS',
-  'GraphQL',
   'Animation',
   'Testing',
 ];
 
 const backEndSkills = [
   'NodeJS',
-  'Apollo Server',
+  'ApolloGraphQL',
   'Databases',
-  'GraphQL',
   'Authentication',
-  'Microservices',
+  'Micro-services',
 ];
 
 const uiuxSkills = ['UI Design with Figma'];

@@ -30,11 +30,11 @@ function Content() {
           stands out. <br />
           <br />
           On the back-end part I make good use of JavaScript with NodeJS,
-          building servers with GraphQL and Apollo as well as REST API, user
-          authentication with the secure and robust authorization platform
-          Auth0, real-time apps with WebSocket and so much more. Also, for
-          months I fine-tuned a personal boilerplate to quickly boostrap
-          projects and be up and running.
+          creating http servers with Express-based REST API, user authentication
+          with secure authentication library Passport, upload with Amazon S3,
+          email verification with view engines and so much more. For months I
+          fine-tuned a personal boilerplate to quickly boostrap projects and be
+          up and running.
           <br />
           <br />
           Besides languages and tooling, Web development is about thinking,

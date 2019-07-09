@@ -16,6 +16,10 @@ import Contact from '../../components/Contact/Loadable';
 import { cssPageContainer } from '../../base';
 import addEvent from '../HomePage/addEvent';
 
+const Container = styled.div`
+  ${cssPageContainer}
+`;
+
 function AboutMe() {
   const doc = document.documentElement;
   const [clientWidth, setClientWidth] = useState(doc.clientWidth);
@@ -30,10 +34,6 @@ function AboutMe() {
     </Container>
   );
 }
-
-const Container = styled.div`
-  ${cssPageContainer}
-`;
 
 AboutMe.propTypes = {};
 

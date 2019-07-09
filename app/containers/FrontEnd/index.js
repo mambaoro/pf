@@ -17,6 +17,10 @@ import { cssPageContainer } from '../../base';
 import skillList from '../../components/FrontEnd/skillList';
 import addEvent from '../HomePage/addEvent';
 
+const Container = styled.div`
+  ${cssPageContainer}
+`;
+
 function FrontEnd() {
   const doc = document.documentElement;
   const [clientWidth, setClientWidth] = useState(doc.clientWidth);
@@ -31,10 +35,6 @@ function FrontEnd() {
     </Container>
   );
 }
-
-const Container = styled.div`
-  ${cssPageContainer}
-`;
 
 FrontEnd.propTypes = {};
 

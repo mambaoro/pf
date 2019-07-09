@@ -9,6 +9,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { cssDivHeadings, cssDivList, media, bp } from '../../base';
 import SvgGithub from '../GithubIcon/Loadable';
+import SvgIn from '../InIcon';
 
 function Contact() {
   return (
@@ -21,20 +22,29 @@ function Contact() {
           mam.baoro@outlook.fr
         </a>
         <a
-          href="https://drive.google.com/open?id=1fg6kpB56vvgRcAjYCjjgLCghJyQQszfW"
+          href="https://drive.google.com/open?id=1WBNmGeAoPGO9wgIWuvEeljx3fDjGuOG-"
           className="resume"
           target="_blank"
         >
           Resume
         </a>
         <p>&copy; Site created by Mamadou Baoro - 2019</p>
-        <a
-          href="https://github.com/mambaoro"
-          className="github"
-          target="_blank"
-        >
-          <SvgGithub fill="#fafafa" />
-        </a>
+        <DivIcons>
+          <a
+            href="https://github.com/mambaoro"
+            className="github"
+            target="_blank"
+          >
+            <SvgGithub fill="#fafafa" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mambaoro/"
+            className="in"
+            target="_blank"
+          >
+            <SvgIn fill="#fafafa" />
+          </a>
+        </DivIcons>
       </DivContent>
     </Section>
   );
@@ -87,9 +97,6 @@ const DivContent = styled.div`
     color: var(--bg-text-primary);
     margin: 0 auto;
     margin-bottom: 2rem;
-    :hover {
-      color: var(--bg-button);
-    }
   }
   a.email {
     ${media(css2Bp600, bp.bp600)}
@@ -97,6 +104,9 @@ const DivContent = styled.div`
   a.github {
     border: none;
     margin-bottom: 0;
+  }
+  a.in {
+    margin-left: 1rem;
   }
   p {
     text-align: center;
@@ -110,6 +120,9 @@ const DivContent = styled.div`
   ${media(css1Bp600, bp.bp600)}
 `;
 
+const DivIcons = styled.div`
+  display: flex;
+`;
 Contact.propTypes = {};
 
 export default Contact;

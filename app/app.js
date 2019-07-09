@@ -11,15 +11,11 @@ import '@babel/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ApolloProvider } from 'react-apollo';
 import { Provider } from 'unstated';
 import 'sanitize.css/sanitize.css';
 import FontFaceObserver from 'fontfaceobserver';
 // Import root app
 import App from 'containers/App';
-
-// Import Apollo Client instance
-import client from './apolloClient';
 
 // Load the favicon and the .htaccess file
 /* eslint-disable import/no-unresolved, import/extensions */
@@ -42,13 +38,11 @@ const MOUNT_NODE = document.getElementById('app');
 
 const render = () => {
   ReactDOM.render(
-    <ApolloProvider client={client}>
-      <Router>
-        <Provider>
-          <App />
-        </Provider>
-      </Router>
-    </ApolloProvider>,
+    <Router>
+      <Provider>
+        <App />
+      </Provider>
+    </Router>,
     MOUNT_NODE,
   );
 };
