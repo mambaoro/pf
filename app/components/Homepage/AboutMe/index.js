@@ -14,28 +14,6 @@ import { cssDivHeadings, media, bp } from '../../../base';
 
 AOS.init();
 
-function AboutMe() {
-  return (
-    <Section>
-      <DivHeadings>
-        <h1>Mamadou Baoro</h1>
-        <h2>Web Developer</h2>
-        <h2>Software Developer</h2>
-      </DivHeadings>
-      <DivPresentation>
-        <p>
-          Hi, I’m a web developer focused on creating fully working web
-          applications. From user interface to deployment on the cloud, I&apos;m
-          able to build any parts of a web app with a robust tech stack.
-        </p>
-        <Button>
-          <Link to="/about-me">More about me</Link>
-        </Button>
-      </DivPresentation>
-    </Section>
-  );
-}
-
 const css1Bp500 = css`
   display: flex;
   margin-top: 3rem;
@@ -153,6 +131,28 @@ const Button = styled.button`
   }
   ${media(css5Bp500, bp.bp500)}
 `;
+
+function AboutMe() {
+  return (
+    <Section>
+      <DivHeadings>
+        <h1>Mamadou Baoro</h1>
+        <h2>Web Developer</h2>
+        <h2>Software Developer</h2>
+      </DivHeadings>
+      <DivPresentation>
+        <p>
+          Hi, I’m a web developer focused on creating fully working web
+          applications. From user interface to deployment on the cloud, I&apos;m
+          able to build any parts of a web app with a robust tech stack.
+        </p>
+        <Button>
+          <Link to="/about-me">More about me</Link>
+        </Button>
+      </DivPresentation>
+    </Section>
+  );
+}
 
 AboutMe.propTypes = {};
 
