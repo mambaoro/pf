@@ -59,11 +59,11 @@ function Content() {
       <DivText>
         <p>
           I’m a web developer focused on creating web apps from the tiniest bit
-          of CSS to deployment on the cloud. On the front-end part I develop
-          user interfaces with routing and state management, with technologies
-          like React and JavaScript. I’m also a skilled CSS developer, styling
-          pages without Bootstrap or any library for a fine-grained design that
-          stands out. <br />
+          of CSS to deployment on the cloud. On the front-end part I create user
+          interfaces with routing and state management, with technologies like
+          React and JavaScript. I’m also a skilled CSS developer, styling pages
+          without Bootstrap or any library for a fine-grained design that stands
+          out. <br />
           <br />
           On the back-end part I make good use of JavaScript with NodeJS,
           creating http servers with Express-based REST API, user authentication

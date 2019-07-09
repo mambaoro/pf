@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Link, withRouter } from 'react-router-dom';
 import AOS from 'aos';
@@ -159,6 +159,8 @@ function AboutMe(props) {
   );
 }
 
-AboutMe.propTypes = {};
+AboutMe.propTypes = {
+  history: PropTypes.object,
+};
 
 export default withRouter(AboutMe);
