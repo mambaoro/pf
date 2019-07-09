@@ -110,7 +110,7 @@ const Button = styled.button`
   margin: 0 auto;
   margin-top: 2rem;
   padding: 1.2rem;
-  button:focus {
+  &:focus {
     outline: 0;
   }
   ${cssFontSize}
