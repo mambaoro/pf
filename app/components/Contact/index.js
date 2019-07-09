@@ -36,6 +36,7 @@ const Section = styled.section`
   width: 100%;
   max-width: 96rem;
   justify-self: center;
+  align-self: end;
 `;
 
 const DivHeadings = styled.div`

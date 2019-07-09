@@ -115,5 +115,6 @@ export function cssPageContainer() {
     );
     display: grid;
     padding-top: calc(3rem + 4.8rem);
+    min-height: 100vh;
   `;
 }
