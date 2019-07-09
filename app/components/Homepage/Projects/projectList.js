@@ -25,10 +25,10 @@ const projectList = [
   },
   {
     label: 'Email verification app',
-    linkGitHub: '#',
-    linkHeroku: '#',
+    linkGitHub: 'https://github.com/mambaoro/email-verif-app.git',
+    linkHeroku: 'https://emailverificationapp.mambaoro.com/',
     description:
-      'Features an email verification app built with NodeJS, view engine Pug and React.',
+      'Features an email verification app built with NodeJS, MySQL and React.',
     liveCode: true,
   },
   {

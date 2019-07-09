@@ -18,6 +18,7 @@ const Section = styled.section`
   width: 75vw;
   div {
     margin: 0 auto;
+    outline: none;
     p {
       font-size: 3.559rem;
       text-align: center;
