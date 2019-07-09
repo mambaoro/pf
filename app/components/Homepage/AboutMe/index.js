@@ -7,7 +7,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { cssDivHeadings, media, bp } from '../../../base';
@@ -114,6 +114,7 @@ const Button = styled.button`
   background: var(--gradient-primary);
   border-radius: var(--border-radius-button);
   border: none;
+  outline: none;
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
   cursor: pointer;
   :hover {
@@ -132,7 +133,11 @@ const Button = styled.button`
   ${media(css5Bp500, bp.bp500)}
 `;
 
-function AboutMe() {
+function AboutMe(props) {
+  const buttonOnClick = e => {
+    e.preventDefault();
+    props.history.push('/about-me');
+  };
   return (
     <Section>
       <DivHeadings>
@@ -146,7 +151,7 @@ function AboutMe() {
           applications. From user interface to deployment on the cloud, I&apos;m
           able to build any parts of a web app with a robust tech stack.
         </p>
-        <Button>
+        <Button onClick={buttonOnClick}>
           <Link to="/about-me">More about me</Link>
         </Button>
       </DivPresentation>
@@ -156,4 +161,4 @@ function AboutMe() {
 
 AboutMe.propTypes = {};
 
-export default AboutMe;
+export default withRouter(AboutMe);
