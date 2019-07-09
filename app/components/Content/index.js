@@ -14,24 +14,6 @@ import { cssDivList, cssDivHeadings, media, bp } from '../../base';
 
 AOS.init();
 
-function Content(props) {
-  return (
-    <ListSkills data-aos="fade-right">
-      {props.skillList.map(skill => (
-        <ListItemSkill key={v4()}>
-          <DivHeadings className="headings">
-            <h1>{skill.heading}</h1>
-            <h2>{skill.subheading}</h2>
-          </DivHeadings>
-          <DivDescription className="description">
-            <p>{skill.description}</p>
-          </DivDescription>
-        </ListItemSkill>
-      ))}
-    </ListSkills>
-  );
-}
-
 const css1Bp600 = css`
   display: grid;
   grid-template-columns: max-content;
@@ -129,6 +111,24 @@ const DivDescription = styled.div`
   min-height: 20rem;
   color: var(--color-text-primary);
 `;
+
+function Content(props) {
+  return (
+    <ListSkills data-aos="fade-right">
+      {props.skillList.map(skill => (
+        <ListItemSkill key={v4()}>
+          <DivHeadings className="headings">
+            <h1>{skill.heading}</h1>
+            <h2>{skill.subheading}</h2>
+          </DivHeadings>
+          <DivDescription className="description">
+            <p>{skill.description}</p>
+          </DivDescription>
+        </ListItemSkill>
+      ))}
+    </ListSkills>
+  );
+}
 
 Content.propTypes = {
   skillList: PropTypes.array,

@@ -8,6 +8,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const SvgIconGit = styled.svg`
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-left: -4px;
+  pointer-events: none;
+`;
+
 function GithubIcon({ fill }) {
   return (
     <SvgIconGit
@@ -20,14 +28,6 @@ function GithubIcon({ fill }) {
     </SvgIconGit>
   );
 }
-
-const SvgIconGit = styled.svg`
-  display: block;
-  width: 4.8rem;
-  height: 4.8rem;
-  margin-left: -4px;
-  pointer-events: none;
-`;
 
 GithubIcon.propTypes = {
   fill: PropTypes.string,

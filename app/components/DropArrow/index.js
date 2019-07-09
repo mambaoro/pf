@@ -9,6 +9,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { cssDropArrow } from '../../base';
 
+const SVG = styled.svg`
+  ${cssDropArrow}
+`;
+
 function DropArrow({ isDropped }) {
   return (
     (!isDropped && (
@@ -79,10 +83,6 @@ function DropArrow({ isDropped }) {
     )
   );
 }
-
-const SVG = styled.svg`
-  ${cssDropArrow}
-`;
 
 DropArrow.propTypes = {
   isDropped: PropTypes.bool,

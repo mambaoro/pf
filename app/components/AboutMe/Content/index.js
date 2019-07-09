@@ -13,39 +13,6 @@ import { cssDivHeadings, cssDivList, media, bp } from '../../../base';
 
 AOS.init();
 
-function Content() {
-  return (
-    <Main data-aos="fade-right">
-      <DivHeadings>
-        <h1>Mamadou Baoro</h1>
-        <h2>About me</h2>
-      </DivHeadings>
-      <DivText>
-        <p>
-          I’m a web developer focused on creating web apps from the tiniest bit
-          of CSS to deployment on the cloud. On the front-end part I develop
-          user interfaces with routing and state management, with technologies
-          like React and JavaScript. I’m also a skilled CSS developer, styling
-          pages without Bootstrap or any library for a fine-grained design that
-          stands out. <br />
-          <br />
-          On the back-end part I make good use of JavaScript with NodeJS,
-          creating http servers with Express-based REST API, user authentication
-          with secure authentication library Passport, upload with Amazon S3,
-          email verification with view engines and so much more. For months I
-          fine-tuned a personal boilerplate to quickly boostrap projects and be
-          up and running.
-          <br />
-          <br />
-          Besides languages and tooling, Web development is about thinking,
-          therefore i’m not opiniated and always willing to use new concept and
-          technologies. So, let&apos;s think our next projects.
-        </p>
-      </DivText>
-    </Main>
-  );
-}
-
 const css1Bp600 = css`
   width: 75%;
 `;
@@ -81,6 +48,39 @@ const DivText = styled.div`
     ${media(css1Bp600, bp.bp600)}
   }
 `;
+
+function Content() {
+  return (
+    <Main data-aos="fade-right">
+      <DivHeadings>
+        <h1>Mamadou Baoro</h1>
+        <h2>About me</h2>
+      </DivHeadings>
+      <DivText>
+        <p>
+          I’m a web developer focused on creating web apps from the tiniest bit
+          of CSS to deployment on the cloud. On the front-end part I develop
+          user interfaces with routing and state management, with technologies
+          like React and JavaScript. I’m also a skilled CSS developer, styling
+          pages without Bootstrap or any library for a fine-grained design that
+          stands out. <br />
+          <br />
+          On the back-end part I make good use of JavaScript with NodeJS,
+          creating http servers with Express-based REST API, user authentication
+          with secure authentication library Passport, upload with Amazon S3,
+          email verification with view engines and so much more. For months I
+          fine-tuned a personal boilerplate to quickly boostrap projects and be
+          up and running.
+          <br />
+          <br />
+          Besides languages and tooling, Web development is about thinking,
+          therefore i’m not opiniated and always willing to use new concept and
+          technologies. So, let&apos;s think our next projects.
+        </p>
+      </DivText>
+    </Main>
+  );
+}
 
 Content.propTypes = {};
 

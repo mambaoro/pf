@@ -13,27 +13,6 @@ import SvgGitHub from '../GithubIcon/Loadable';
 import SvgCrossIcon from '../CrossIcon/Loadable';
 import filled from '../../images/svg/icons8-menu-filled.svg';
 
-function TopBar() {
-  return (
-    <Subscribe to={[SidebarContainer]}>
-      {sidebar => (
-        <Div>
-          <LinkIconMenu href="https://github.com/mambaoro" target="_blank">
-            <SvgGitHub />
-          </LinkIconMenu>
-          {!sidebar.state.isOpen ? (
-            <LinkIconMenu onClick={() => sidebar.handleToggle()}>
-              <ObjectIconMenu data={filled} type="image/svg+xml" />
-            </LinkIconMenu>
-          ) : (
-            <SvgCrossIcon />
-          )}
-        </Div>
-      )}
-    </Subscribe>
-  );
-}
-
 const Div = styled.div`
   display: flex;
   align-self: start;
@@ -63,6 +42,27 @@ const ObjectIconMenu = styled.object`
   height: 4rem;
   pointer-events: none;
 `;
+
+function TopBar() {
+  return (
+    <Subscribe to={[SidebarContainer]}>
+      {sidebar => (
+        <Div>
+          <LinkIconMenu href="https://github.com/mambaoro" target="_blank">
+            <SvgGitHub />
+          </LinkIconMenu>
+          {!sidebar.state.isOpen ? (
+            <LinkIconMenu onClick={() => sidebar.handleToggle()}>
+              <ObjectIconMenu data={filled} type="image/svg+xml" />
+            </LinkIconMenu>
+          ) : (
+            <SvgCrossIcon />
+          )}
+        </Div>
+      )}
+    </Subscribe>
+  );
+}
 
 TopBar.propTypes = {};
 

@@ -8,6 +8,13 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const SvgIconIn = styled.svg`
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  pointer-events: none;
+`;
+
 function InIcon() {
   return (
     <SvgIconIn
@@ -20,13 +27,6 @@ function InIcon() {
     </SvgIconIn>
   );
 }
-
-const SvgIconIn = styled.svg`
-  display: block;
-  width: 4.8rem;
-  height: 4.8rem;
-  pointer-events: none;
-`;
 
 InIcon.propTypes = {};
 

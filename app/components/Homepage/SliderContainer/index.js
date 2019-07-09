@@ -12,6 +12,24 @@ import Slider from 'react-slick';
 import quoteList from './quoteList';
 import addEvent from '../../../containers/HomePage/addEvent';
 
+const Section = styled.section`
+  margin-top: 6.5rem;
+  justify-self: center;
+  width: 75vw;
+  div {
+    margin: 0 auto;
+    p {
+      font-size: 3.559rem;
+      text-align: center;
+      margin: 0;
+      background-image: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+`;
+
 function SliderContainer() {
   const doc = document.documentElement;
   const [clientWidth, setClientWidth] = useState(doc.clientWidth);
@@ -45,24 +63,6 @@ function SliderContainer() {
     </Section>
   );
 }
-
-const Section = styled.section`
-  margin-top: 6.5rem;
-  justify-self: center;
-  width: 75vw;
-  div {
-    margin: 0 auto;
-    p {
-      font-size: 3.559rem;
-      text-align: center;
-      margin: 0;
-      background-image: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-`;
 
 SliderContainer.propTypes = {};
 

@@ -13,79 +13,6 @@ import posed from 'react-pose';
 import SidebarContainer from './StateSidebar';
 import { media, bp } from '../../base';
 
-function Sidebar() {
-  const [ListIsActive, setListActive] = useState(false);
-  const handleClick = () => setListActive(true);
-  return (
-    <Subscribe to={[SidebarContainer]}>
-      {sidebar => (
-        <NavSideBar pose={!sidebar.state.isOpen ? 'closed' : 'open'}>
-          <div>
-            <NavLink
-              to="/"
-              exact
-              className="home"
-              activeClassName="active"
-              onClick={() => sidebar.handleToggle()}
-            >
-              Home
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/about-me"
-              exact
-              className="about-me"
-              activeClassName="active"
-              onClick={() => sidebar.handleToggle()}
-            >
-              About Me
-            </NavLink>
-          </div>
-          <DivSkills onClick={handleClick}>
-            {!ListIsActive ? (
-              <p className="skills">Skills</p>
-            ) : (
-              <ul>
-                <li className="front-end">
-                  <NavLink
-                    to="/front-end"
-                    exact
-                    activeClassName="active"
-                    onClick={() => sidebar.handleToggle()}
-                  >
-                    Front-End
-                  </NavLink>
-                </li>
-                <li className="back-end">
-                  <NavLink
-                    to="/back-end"
-                    exact
-                    activeClassName="active"
-                    onClick={() => sidebar.handleToggle()}
-                  >
-                    Back-End
-                  </NavLink>
-                </li>
-                <li className="ui">
-                  <NavLink
-                    to="/ui-design"
-                    exact
-                    activeClassName="active"
-                    onClick={() => sidebar.handleToggle()}
-                  >
-                    UI Design
-                  </NavLink>
-                </li>
-              </ul>
-            )}
-          </DivSkills>
-        </NavSideBar>
-      )}
-    </Subscribe>
-  );
-}
-
 const css1Bp500 = css`
   width: 60vw;
 `;
@@ -164,6 +91,79 @@ const DivSkills = styled.div`
     }
   }
 `;
+
+function Sidebar() {
+  const [ListIsActive, setListActive] = useState(false);
+  const handleClick = () => setListActive(true);
+  return (
+    <Subscribe to={[SidebarContainer]}>
+      {sidebar => (
+        <NavSideBar pose={!sidebar.state.isOpen ? 'closed' : 'open'}>
+          <div>
+            <NavLink
+              to="/"
+              exact
+              className="home"
+              activeClassName="active"
+              onClick={() => sidebar.handleToggle()}
+            >
+              Home
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              to="/about-me"
+              exact
+              className="about-me"
+              activeClassName="active"
+              onClick={() => sidebar.handleToggle()}
+            >
+              About Me
+            </NavLink>
+          </div>
+          <DivSkills onClick={handleClick}>
+            {!ListIsActive ? (
+              <p className="skills">Skills</p>
+            ) : (
+              <ul>
+                <li className="front-end">
+                  <NavLink
+                    to="/front-end"
+                    exact
+                    activeClassName="active"
+                    onClick={() => sidebar.handleToggle()}
+                  >
+                    Front-End
+                  </NavLink>
+                </li>
+                <li className="back-end">
+                  <NavLink
+                    to="/back-end"
+                    exact
+                    activeClassName="active"
+                    onClick={() => sidebar.handleToggle()}
+                  >
+                    Back-End
+                  </NavLink>
+                </li>
+                <li className="ui">
+                  <NavLink
+                    to="/ui-design"
+                    exact
+                    activeClassName="active"
+                    onClick={() => sidebar.handleToggle()}
+                  >
+                    UI Design
+                  </NavLink>
+                </li>
+              </ul>
+            )}
+          </DivSkills>
+        </NavSideBar>
+      )}
+    </Subscribe>
+  );
+}
 
 Sidebar.propTypes = {};
 

@@ -37,85 +37,6 @@ import { frontEndSkills, backEndSkills, uiuxSkills } from './skill_ItemList';
 
 AOS.init();
 
-function Skills() {
-  return (
-    <Subscribe to={[DropFE, DropBE, DropUX]}>
-      {(dropFE, dropBE, dropUX) => (
-        <Section>
-          <DivHeadings>
-            <h1>Skills</h1>
-          </DivHeadings>
-
-          <DivListProjects>
-            <ULList data-aos="fade-right">
-              <article>
-                <li>
-                  <p>Front-End</p>
-                  <div onClick={e => dropFE.toggleDrop(e)}>
-                    <DropArrow isDropped={dropFE.state.isDropped} />
-                  </div>
-                </li>
-                <ULSkillList pose={!dropFE.state.isDropped ? 'closed' : 'open'}>
-                  {frontEndSkills.map(skill => (
-                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
-                  ))}
-                  <NavLink
-                    to="front-end"
-                    exact
-                    style={{ display: !dropFE.state.isDropped ? 'none' : '' }}
-                  >
-                    See details
-                  </NavLink>
-                </ULSkillList>
-              </article>
-              <article>
-                <li>
-                  <p>Back-End</p>
-                  <div onClick={e => dropBE.toggleDrop(e)}>
-                    <DropArrow isDropped={dropBE.state.isDropped} />
-                  </div>
-                </li>
-                <ULSkillList pose={!dropBE.state.isDropped ? 'closed' : 'open'}>
-                  {backEndSkills.map(skill => (
-                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
-                  ))}
-                  <NavLink
-                    to="/back-end"
-                    exact
-                    style={{ display: !dropBE.state.isDropped ? 'none' : '' }}
-                  >
-                    See details
-                  </NavLink>
-                </ULSkillList>
-              </article>
-              <article>
-                <li>
-                  <p>UI Design</p>
-                  <div onClick={e => dropUX.toggleDrop(e)}>
-                    <DropArrow isDropped={dropUX.state.isDropped} />
-                  </div>
-                </li>
-                <ULSkillList pose={!dropUX.state.isDropped ? 'closed' : 'open'}>
-                  {uiuxSkills.map(skill => (
-                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
-                  ))}
-                  <NavLink
-                    to="ui-design"
-                    exact
-                    style={{ display: !dropUX.state.isDropped ? 'none' : '' }}
-                  >
-                    See details
-                  </NavLink>
-                </ULSkillList>
-              </article>
-            </ULList>
-          </DivListProjects>
-        </Section>
-      )}
-    </Subscribe>
-  );
-}
-
 const css1Bp500 = css`
   display: flex;
   flex-direction: row;
@@ -211,6 +132,85 @@ const ULSkillList = styled(posed.ul(posedListProps))`
   }
   ${media(css2Bp500, bp.bp500)}
 `;
+
+function Skills() {
+  return (
+    <Subscribe to={[DropFE, DropBE, DropUX]}>
+      {(dropFE, dropBE, dropUX) => (
+        <Section>
+          <DivHeadings>
+            <h1>Skills</h1>
+          </DivHeadings>
+
+          <DivListProjects>
+            <ULList data-aos="fade-right">
+              <article>
+                <li>
+                  <p>Front-End</p>
+                  <div onClick={e => dropFE.toggleDrop(e)}>
+                    <DropArrow isDropped={dropFE.state.isDropped} />
+                  </div>
+                </li>
+                <ULSkillList pose={!dropFE.state.isDropped ? 'closed' : 'open'}>
+                  {frontEndSkills.map(skill => (
+                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
+                  ))}
+                  <NavLink
+                    to="front-end"
+                    exact
+                    style={{ display: !dropFE.state.isDropped ? 'none' : '' }}
+                  >
+                    See details
+                  </NavLink>
+                </ULSkillList>
+              </article>
+              <article>
+                <li>
+                  <p>Back-End</p>
+                  <div onClick={e => dropBE.toggleDrop(e)}>
+                    <DropArrow isDropped={dropBE.state.isDropped} />
+                  </div>
+                </li>
+                <ULSkillList pose={!dropBE.state.isDropped ? 'closed' : 'open'}>
+                  {backEndSkills.map(skill => (
+                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
+                  ))}
+                  <NavLink
+                    to="/back-end"
+                    exact
+                    style={{ display: !dropBE.state.isDropped ? 'none' : '' }}
+                  >
+                    See details
+                  </NavLink>
+                </ULSkillList>
+              </article>
+              <article>
+                <li>
+                  <p>UI Design</p>
+                  <div onClick={e => dropUX.toggleDrop(e)}>
+                    <DropArrow isDropped={dropUX.state.isDropped} />
+                  </div>
+                </li>
+                <ULSkillList pose={!dropUX.state.isDropped ? 'closed' : 'open'}>
+                  {uiuxSkills.map(skill => (
+                    <ListSkillItem key={v4()}>{skill}</ListSkillItem>
+                  ))}
+                  <NavLink
+                    to="ui-design"
+                    exact
+                    style={{ display: !dropUX.state.isDropped ? 'none' : '' }}
+                  >
+                    See details
+                  </NavLink>
+                </ULSkillList>
+              </article>
+            </ULList>
+          </DivListProjects>
+        </Section>
+      )}
+    </Subscribe>
+  );
+}
 
 const ListSkillItem = posed.li(posedItemProps);
 
