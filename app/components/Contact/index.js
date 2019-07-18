@@ -97,7 +97,7 @@ function Contact() {
           mam.baoro@outlook.fr
         </a>
         <a
-          href="https://drive.google.com/open?id=1WBNmGeAoPGO9wgIWuvEeljx3fDjGuOG-"
+          href="https://drive.google.com/open?id=1NgYjmv1sfCchQxDVoVgWO24cVtuMWwOQ"
           className="resume"
           target="_blank"
         >
@@ -111,13 +111,6 @@ function Contact() {
             target="_blank"
           >
             <SvgGithub fill="#fafafa" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mambaoro/"
-            className="in"
-            target="_blank"
-          >
-            <SvgIn fill="#fafafa" />
           </a>
         </DivIcons>
       </DivContent>
