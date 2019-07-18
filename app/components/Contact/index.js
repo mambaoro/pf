@@ -97,7 +97,7 @@ function Contact() {
           mam.baoro@outlook.fr
         </a>
         <a
-          href="https://drive.google.com/open?id=1NgYjmv1sfCchQxDVoVgWO24cVtuMWwOQ"
+          href="https://drive.google.com/open?id=1oO5S5kSxCVynwExRpUlg-lX57J6NU95-"
           className="resume"
           target="_blank"
         >
