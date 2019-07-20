@@ -18,14 +18,12 @@ const Div = styled.div`
   align-self: start;
   margin: 2rem;
   margin-top: 1rem;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   top: 0;
-  max-width: 100vw;
+  width: 90%;
   z-index: 100;
-  a:first-of-type {
-    margin-right: 305%;
-  }
   svg {
     width: 4rem;
     cursor: pointer;
