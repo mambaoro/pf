@@ -16,13 +16,10 @@ import filled from '../../images/svg/icons8-menu-filled.svg';
 const Div = styled.div`
   display: flex;
   align-self: start;
-  margin: 2rem;
-  margin-top: 1rem;
-  justify-content: space-around;
+  margin: 1rem 3rem 1rem 2rem;
+  justify-content: space-between;
   align-items: center;
-  position: fixed;
   top: 0;
-  width: 90%;
   z-index: 100;
   svg {
     width: 4rem;
