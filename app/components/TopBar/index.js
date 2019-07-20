@@ -17,14 +17,15 @@ const Div = styled.div`
   display: flex;
   align-self: start;
   margin: 2rem;
-  margin-right: 10%;
   margin-top: 1rem;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  width: 90%;
+  max-width: 100vw;
   z-index: 100;
+  a:first-of-type {
+    margin-right: 305%;
+  }
   svg {
     width: 4rem;
     cursor: pointer;

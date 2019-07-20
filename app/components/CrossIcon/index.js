@@ -17,7 +17,6 @@ function CrossIcon() {
         <svg
           fill="#2B5876"
           onClick={() => sidebar.handleToggle()}
-          xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
           viewBox="0 0 31.112 31.112"
           x="0px"
