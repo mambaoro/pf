@@ -16,7 +16,7 @@ import filled from '../../images/svg/icons8-menu-filled.svg';
 const Div = styled.div`
   display: flex;
   align-self: start;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 1rem 1rem 2rem;
   justify-content: space-between;
   align-items: center;
   top: 0;
