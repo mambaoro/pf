@@ -17,6 +17,7 @@ const Div = styled.div`
   display: flex;
   align-self: start;
   margin: 2rem;
+  margin-right: 10%;
   margin-top: 1rem;
   justify-content: space-between;
   align-items: center;
