@@ -1,5 +1,13 @@
 const projectList = [
   {
+    label: 'E-commerce app with Paypal and React',
+    linkGitHub: 'https://github.com/mambaoro/upload-app-amazon-s3',
+    linkHeroku: 'https://ecommercedemo.mambaoro.com',
+    description:
+      'Features an e-commerce demo with Paypal and React.',
+    liveCode: true,
+  }
+  {
     label: 'Upload app with Amazon S3',
     linkGitHub: 'https://github.com/mambaoro/upload-app-amazon-s3',
     linkHeroku: 'https://uploadapp.mambaoro.com/',
