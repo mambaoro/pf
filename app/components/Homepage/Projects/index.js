@@ -68,13 +68,14 @@ const DivLinks = styled.div`
   width: 50%;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
+  align-items: center;
   a {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
     &.heroku {
       ${cssSmallButton}
-      align-self: center;
+      margin-top: 1.5rem;
     }
     svg {
       width: 4rem;
