@@ -41,7 +41,7 @@ const Div = styled.div`
         color: var(--color-text-button);
         border-radius: 2.5rem;
         text-decoration: none;
-        padding: 1rem 3rem;
+        padding: 1.4rem 3rem;
         font-size: 1.3rem;
         :hover {
           background: var(--gradient-secondary-button-active);
